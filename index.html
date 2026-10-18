@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fff2ef">
+<meta name="description" content="Một cuốn scrapbook nhỏ gửi hội bạn thân nhân ngày 20/10.">
+<title>Một chút thương gửi tụi mình 💌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="intro" class="screen">
+  <div class="intro-glow"></div>
+  <div class="intro-card" id="nameStep">
+    <div class="cat-sign" aria-hidden="true">🐱</div>
+    <div class="sign">Ê, bạn ơi! 💌</div>
+    <h1>Trước khi vào xem quà…</h1>
+    <p>Cho tui biết tên của bạn nha. Có một lời nhắn nhỏ đang đợi bạn đó. 🍒</p>
+    <form id="nameForm" class="name-form">
+      <input id="visitorName" maxlength="35" autocomplete="given-name" placeholder="Tên của bạn là..." required aria-label="Tên của bạn">
+      <button class="primary" type="submit">Đi thôi ✨</button>
+    </form>
+    <p class="tiny">Nhập tên hoặc biệt danh bạn muốn mọi người gọi nhé.</p>
+  </div>
+  <div class="intro-card hidden" id="robotStep">
+    <div class="robot" aria-label="Robot dễ thương">
+      <div class="robot-face"><span class="eye"></span><span class="eye"></span></div>
+    </div>
+    <div id="robotDialogue" class="robot-dialogue" aria-live="polite"></div>
+  </div>
+  <div class="intro-card hidden" id="bookStep">
+    <div class="book-stage">
+        <div class="book-scene" aria-label="Cuốn scrapbook 3D đang lần lượt mở các trang">
+          <div class="book-shadow"></div>
+          <div class="book book-premium">
+            <div class="book-pages-stack"></div><div class="book-back-cover"></div>
+            <div class="book-spread book-spread-left"><span class="page-number">01</span><span class="page-flower">✿</span><p>Có những ngày bình thường…</p><small>về sau lại thành kỷ niệm.</small><span class="page-stamp">OUR<br>MEMORIES</span></div>
+            <div class="book-spread book-spread-right"><span class="page-number">02</span><span class="page-tape"></span><div class="mini-polaroid"><span>🍒</span><small>little moments</small></div><p>Một chút ảnh cũ,<br>một chút chuyện vui.</p><span class="page-doodle">♡</span></div>
+            <div class="book-leaf leaf-one"><span>03</span><b>Và vài lời muốn gửi<br>đến tụi mình. 💌</b><small>always remember</small></div>
+            <div class="book-leaf leaf-two"><span>04</span><b>made with love</b><i>✿</i></div>
+            <div class="book-cover book-cover-premium"><span class="cover-kicker">A LITTLE SCRAPBOOK</span><span class="cover-flower">✿</span><strong>tụi mình<br><em>& những ngày ấy</em></strong><span class="cover-rule"></span><small>20/10 · một món quà nhỏ</small><span class="cover-heart">♥</span><span class="cover-spine"></span></div>
+          </div>
+        </div>
+        <div class="book-caption"><span class="caption-dot"></span><p>Đang mở cuốn sổ kỷ niệm…</p><span class="caption-dot"></span></div>
+      </div>
+  </div>
+  <button id="skipIntro" class="skip hidden">Bỏ qua phần mở đầu ↗</button>
+</section>
+
+<main id="home" class="hidden">
+  <header class="topbar">
+    <div class="brand">🍒 tụi mình, một chút thôi</div>
+    <div class="music-controls">
+      <button id="musicBtn" class="pill" type="button" aria-pressed="false">♫ Bật nhạc</button>
+      <label class="volume" title="Âm lượng">♪ <input id="volume" type="range" min="0" max="1" step=".05" value=".45" aria-label="Âm lượng"></label>
+    </div>
+  </header>
+  <section class="hero">
+    <span class="sticker bow">🎀</span><span class="sticker cherry">🍒</span>
+    <span class="eyebrow">MỘT MÓN QUÀ NHỎ · 20/10</span>
+    <h1>Gửi tụi mình,<br>những ngày còn chung lớp 💗</h1>
+    <p>Có những người giờ không gặp nhau thường xuyên nữa, nhưng kỷ niệm thì vẫn nằm yên ở đây. Ghé mở từng món một nha!</p>
+    <div class="tape">made with a little love ✂️</div>
+  </section>
+  <section class="scrapbook-grid" aria-label="Các món quà">
+    <button class="scrap-card" data-open="letter">
+      <span class="card-tape"></span><span class="card-icon">💌</span>
+      <h2>Phong thư nhỏ</h2><p>Một lời chúc dành riêng cho <span class="name-slot">bạn</span> và vài tấm ảnh kỷ niệm.</p>
+      <span class="card-open">Mở thư ↗</span><span class="corner">♡</span>
+    </button>
+    <button class="scrap-card" data-open="gift">
+      <span class="card-tape"></span><span class="card-icon">🎁</span>
+      <h2>Hộp quà 20/10</h2><p>Mở một tấm thiệp nhỏ, gửi chút dễ thương đến các bạn nữ.</p>
+      <span class="card-open">Mở quà ↗</span><span class="corner">✿</span>
+    </button>
+    <button class="scrap-card" data-open="album">
+      <span class="card-tape"></span><span class="card-icon">📸</span>
+      <h2>Album ngày ấy</h2><p>Những gương mặt, khoảnh khắc và trò ngốc nghếch của lớp mình.</p>
+      <span class="card-open">Xem ảnh ↗</span><span class="corner">♡</span>
+    </button>
+    <button class="scrap-card" data-open="guestbook">
+      <span class="card-tape"></span><span class="card-icon">📒</span>
+      <h2>Sổ lời nhắn</h2><p>Để lại đôi dòng nhé — những người ghé sau cũng sẽ đọc được.</p>
+      <span class="card-open">Viết lời nhắn ↗</span><span class="corner">✿</span>
+    </button>
+  </section>
+  <p class="home-note">Lưu lại một chút tuổi học trò, để sau này còn có cái mà nhớ. 🩷</p>
+  <span class="sticker heart home-heart">♥</span>
+</main>
+
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-panel">
+    <button class="close" id="closeModal" aria-label="Đóng">×</button>
+    <div id="modalContent"></div>
+  </div>
+</div>
+
+<div id="photoLightbox" class="lightbox hidden" role="dialog" aria-modal="true" aria-label="Xem ảnh lớn">
+  <button id="closeLightbox" class="close lightbox-close" aria-label="Đóng ảnh">×</button>
+  <img id="lightboxImg" alt="Ảnh kỷ niệm phóng to">
+  <div id="lightboxPlaceholder" class="lightbox-placeholder hidden">📸<br>Thay ảnh mẫu bằng ảnh lớp mình nha!</div>
+</div>
+
+<audio id="bgMusic" loop preload="none" src="assets/music.mp3"></audio>
+<script src="script.js"></script>
+</body>
+</html>
